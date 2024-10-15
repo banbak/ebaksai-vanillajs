@@ -40,7 +40,7 @@ showSection('bio');
 //     e.preventDefault();
 //     const email = document.getElementById('email').value;
 //     const message = document.getElementById('message').value;
-//     emailjs.send("service_ce6z6mg", "template_m1ftxrh", {
+//     emailjs.send("", "", {
 //         email: email,
 //         message: message,
 //         reply_to: email,
