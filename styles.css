@@ -46,7 +46,6 @@ body {
 
 .sidebar nav ul li a:hover {
     background-color: #5c88ff;
-    /* background-color: #6c5cff; */
     color: #fff;
 }
 
@@ -80,20 +79,21 @@ h2 {
 
 .banner {
     width: 100%;
-    height: 250px;
+    height: 220px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
 
-.tec-card {
+.tec-card, .project-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
+    align-items: center;
     text-align: center;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
 .tec-card h3 {
@@ -101,24 +101,23 @@ h2 {
     text-shadow: 0 0 10px #00ffff;
 }
 
-.tec-card:hover {
-    background-color: #444; /* Cambia el color de fondo */
-    color: #00ffff; /* Cambia el color del texto */
-    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
-    transition: all 0.3s ease; /* Añade una transición suave */
+.tec-card:hover, .project-card:hover {
+    background-color: #444;
+    transform: scale(1.05);
 }
-
 
 /* Estilos para las tarjetas de proyectos */
-.project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #333;
-    padding: 20px;
+.project-card img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
     border-radius: 10px;
-    text-align: center;
 }
+
+.project-card img:hover {
+    transform: scale(1.05); 
+}
+
 .project-card h3 {
     color: #5c88ff;
     margin-bottom: 20px;
@@ -127,17 +126,6 @@ h2 {
 .project-card p {
     color: #dad6fd;
     margin-bottom: 20px;
-}
-
-.project-card img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-.project-card img:hover {
-    transform: scale(1.05); 
-    transition: all 0.3s ease;
 }
 
 .project-card a {
@@ -150,12 +138,14 @@ h2 {
     color: #fff;
 }
 
+/* Social links */
 .social-links {
     display: flex;
-    justify-content: center;  /* Centrar horizontalmente */
-    gap: 20px;                /* Añadir espacio entre los enlaces */
-    margin-bottom: 20px;      /* Espacio debajo de los enlaces */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
+
 .social-links a {
     color: #5c88ff;
     text-decoration: none;
@@ -163,51 +153,88 @@ h2 {
 
 .social-links a:hover {
     color: #fff;
-    transform: scale(1.1); 
+    transform: scale(1.1);
     transition: all 0.3s ease;
 }
 
-/* Estilos para la sección de contacto */
-#contacto h2 {
-    text-align: center;
-}
-
+/* Estilos para el formulario */
 form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;                    /* El formulario ocupará el 50% del espacio */
-    margin: 0 auto;                 /* Centramos el formulario horizontalmente */
+    width: 50%;
+    margin: 0 auto;
 }
 
 form input, form textarea {
-    margin-bottom: 10px;
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: none;
-    width: 100%;
+    margin-bottom: 10px;
 }
 
 form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
     background-color: #5c88ff;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 form button:hover {
     background-color: #1c04fa;
 }
 
-#alert {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #6c5cff;
-    color: #c1e90e;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Media Queries para hacer la página responsiva */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    /* Ajustar sidebar en pantallas pequeñas */
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar nav ul li a {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* El contenido principal ocupa todo el ancho */
+    .content {
+        padding: 20px;
+    }
+
+    /* Formulario más pequeño y centrado */
+    form {
+        width: 80%; /* Ocupará el 80% en pantallas pequeñas */
+    }
+
+    .project-card img {
+        max-width: 100%; /* Las imágenes ocuparán todo el ancho */
+    }
+
+    /* Tarjetas de tecnología y proyectos apiladas */
+    .tec-card, .project-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Ajustar banner y texto en pantallas muy pequeñas */
+    .banner {
+        height: 150px;
+    }
+
+    .section p {
+        font-size: medium;
+    }
+
+    /* Formulario más compacto */
+    form {
+        width: 100%;
+    }
 }
