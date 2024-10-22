@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -13,13 +12,11 @@ body {
     min-height: 100vh;
 }
 
-/* Estructura de la página */
 .container {
     display: flex;
     width: 100%;
 }
 
-/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #252525;
@@ -49,13 +46,11 @@ body {
     color: #fff;
 }
 
-/* Main content */
 .content {
     flex: 1;
     padding: 40px;
 }
 
-/* Estilos para secciones */
 .section {
     background-color: #2a2a2a;
     padding: 20px;
@@ -106,7 +101,6 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Estilos para las tarjetas de proyectos */
 .project-card img {
     width: 100%;
     max-width: 300px;
@@ -138,7 +132,6 @@ h2 {
     color: #fff;
 }
 
-/* Social links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -157,7 +150,6 @@ h2 {
     transition: all 0.3s ease;
 }
 
-/* Estilos para el formulario */
 form {
     width: 50%;
     margin: 0 auto;
@@ -181,13 +173,11 @@ form button:hover {
     background-color: #1c04fa;
 }
 
-/* Media Queries para hacer la página responsiva */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
-    /* Ajustar sidebar en pantallas pequeñas */
     .sidebar {
         width: 100%;
         text-align: center;
@@ -198,21 +188,18 @@ form button:hover {
         font-size: 18px;
     }
 
-    /* El contenido principal ocupa todo el ancho */
     .content {
         padding: 20px;
     }
 
-    /* Formulario más pequeño y centrado */
     form {
-        width: 80%; /* Ocupará el 80% en pantallas pequeñas */
+        width: 80%;
     }
 
     .project-card img {
-        max-width: 100%; /* Las imágenes ocuparán todo el ancho */
+        max-width: 100%; 
     }
-
-    /* Tarjetas de tecnología y proyectos apiladas */
+    
     .tec-card, .project-card {
         width: 100%;
     }
@@ -224,7 +211,6 @@ form button:hover {
         padding: 10px;
     }
 
-    /* Ajustar banner y texto en pantallas muy pequeñas */
     .banner {
         height: 150px;
     }
@@ -233,7 +219,6 @@ form button:hover {
         font-size: medium;
     }
 
-    /* Formulario más compacto */
     form {
         width: 100%;
     }
