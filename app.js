@@ -32,8 +32,7 @@ sidebarLinks.forEach(link => {
     });
 });
 
-// Mostrar la primera sección por defecto (Bio)
-showSection('bio');
+showSection('proyectos');
 
 //Enviar email
 // function sendEmail(e) {
